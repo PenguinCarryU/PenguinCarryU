@@ -8,7 +8,7 @@ for (let i = 0; i < allLiElements.length; i++) {
 }
 let allLiElements1 = document.querySelectorAll("p");
 for (let i = 0; i < allLiElements.length; i++) {
-    allLiElements1[i].style.color = "grey";
+    allLiElements1[i].style.color = "purple";
 }
 //alert("Warning！");  //彈出式視窗
 /* 
@@ -46,12 +46,12 @@ function setUserName() {
         else {
             localStorage.setItem("name", myName);
             localStorage.setItem("needInputName", "false"); // 已輸入過名字，改為false
-            myHeading.innerHTML = "歡迎來到黎明殺機 " + myName;
+            myHeading.innerHTML = "weclome to DeadByDaylight " + myName;
         }
         
     } else {
         let storedName = localStorage.getItem("name");
-        myHeading.innerHTML = "歡迎來到黎明殺機 " + storedName;
+        myHeading.innerHTML = "weclome to DeadByDaylight " + storedName;
     }
 }
 

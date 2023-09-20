@@ -13,6 +13,11 @@ a {                                        /*技能字體 大小*/
     font-family: 'Noto Serif TC', serif;    /*字體*/
     line-height: 2;
 }
+p {                                        /*技能字體 大小*/
+  font-size: 20px;                        /*大小*/
+  font-family: 'Noto Serif TC', serif;    /*字體*/
+  line-height: 2;
+}
 
 .red {
     color: red;
@@ -28,16 +33,27 @@ a {                                        /*技能字體 大小*/
 }
 
 .image-wrapper {
-    display: flex;
-    align-items: center;
+  display: flex;
+  flex-direction: column; /* 设置元素内部为垂直方向布局 */
+  align-items: center; /* 水平居中对齐 */
+  text-align: center; /* 文本水平居中对齐 */
 }
 
 .image-wrapper img {
-    max-width: 50%;
+  width: 700px; /* 控制图片的宽度，可以根据需要调整 */
+  height: 700px; /* 控制图片的高度，可以根据需要调整 */
+  object-fit: cover; /* 保持图片比例并填充容器 */
 }
 
+
 .image-wrapper p {
-    margin-left: 10px; /* 设置文字与图片之间的间距 */
+  display: flex;
+  flex-direction: column; /* 设置元素内部为垂直方向布局 */
+  align-items: center; /* 水平居中对齐 */
+  text-align: center; /* 文本水平居中对齐 */
+  max-width: 500px; /* 限制文本的最大宽度，根据需要调整 */
+  overflow: visible; /* 允许文本换行，而不隐藏溢出部分 */
+  overflow-wrap: break-word; /* 在单词内允许换行 */
 }
   img {
     /*
