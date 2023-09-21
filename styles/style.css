@@ -28,8 +28,11 @@ p {                                        /*技能字體 大小*/
   }
 
   .image-container {
-    display: flex;
-    justify-content: space-between;
+    display: flex; /* 使用弹性盒模型布局 */
+    justify-content: space-between; /* 左右对齐，两张图片分别位于左右两侧 */
+}
+.image-container img {
+max-width: 95%; /* 图片最大宽度为容器的一半，以确保左右排列 */
 }
 
 .image-wrapper {
@@ -54,6 +57,17 @@ p {                                        /*技能字體 大小*/
   max-width: 500px; /* 限制文本的最大宽度，根据需要调整 */
   overflow: visible; /* 允许文本换行，而不隐藏溢出部分 */
   overflow-wrap: break-word; /* 在单词内允许换行 */
+}
+.center-container {
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+  /*height: 100vh;  //设置容器高度占满整个视口 */
+}
+.center-container marquee {
+  color: red; /* 设置文本颜色 */
+  font-size: 20px;
+  /* 添加其他样式属性，例如 behavior、direction、scrollamount 等 */
 }
   img {
     /*
