@@ -17,7 +17,6 @@ document.querySelector("html").onclick = function () {
     };                          
 */
 
-var myImage = document.querySelector("img");
 
 /*
 myImage.onclick = function () {             //當圖片被點擊時
@@ -66,3 +65,6 @@ myButton.onclick = function () {
     localStorage.setItem("needInputName", "true"); // 點擊按鈕後即可換使用者名稱
     setUserName();
 };
+
+
+

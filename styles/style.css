@@ -35,7 +35,7 @@ p {                                        /*技能字體 大小*/
 max-width: 95%; /* 图片最大宽度为容器的一半，以确保左右排列 */
 }
 
-.image-wrapper  {
+.image-wrapper {
   display: flex;
   flex-direction: column; /* 设置元素内部为垂直方向布局 */
   align-items: center; /* 水平居中对齐 */

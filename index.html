@@ -13,18 +13,23 @@
   </head>
   <body>  
     <div class="center-container">
-    <marquee 
-    bgcolor = "pink"
-    direction="left"
-    behavior="ALTERNATE"
-    width="500"
-    scrollamount="10"
-                      >
-      
-    遊戲本體限時特價 US 9.99$
+      <marquee 
+      bgcolor = "pink"
+      direction="left"
+      behavior="ALTERNATE"
+      width="500"
+      scrollamount="10"
+                      >  
+      遊戲本體限時特價 US 9.99$
     </marquee>
     
     </div>
+    
+    <audio controls loop id="background">
+      <source src="audio/background.mp3" type="audio/mpeg">
+      您的瀏覽器無法支援音頻播放  <!--當音樂無法播放時會出現的文字-->
+    </audio>
+
     <h1>殺手</h1>
     <!-- <a href="https://deadbydaylight.fandom.com/zh/wiki/枯萎者">枯魔</a> -->
 
@@ -34,12 +39,21 @@
           <img src="images/隱鬼.png" alt="角色圖片" />
           <a href="https://deadbydaylight.fandom.com/zh/wiki/幽灵杀手">隱鬼</a>
           <p>是一位隱形殺手，能夠在「骷髏喪鐘」的鐘聲中隱身和現身。</p>
+          <audio controls id="Wraith-bell">
+            <source src="audio/Wraith-bell.mp3" type="audio/mpeg">
+            您的瀏覽器無法支援音頻播放
+          </audio>
+          <iframe width="110" height="200" src="audio/Wraith-bell.mp3" frameborder="0" scrolling="no"></iframe>
       </div>
       <div class="image-wrapper">
           
-          <img src="images/醫生.png" alt="角色圖片" />
+          <img src="images/醫生.png" alt="角色圖片"/>
           <a href="https://deadbydaylight.fandom.com/zh/wiki/医生">醫生</a>
           <p>一個令人精神失常的殺手，使用「卡特的電火花」可以製造靜電力場，摧殘逃生者，並導致逃生者出現幻覺，在恐懼中忍不住尖叫，暴露他們的位置。</p>
+          <audio controls id="doctor">
+            <source src="audio/doctor-voice.mp3" type="audio/mpeg">
+            您的瀏覽器無法支援音頻播放
+          </audio>
       </div>
     </div>
 
