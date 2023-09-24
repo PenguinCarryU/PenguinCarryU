@@ -27,12 +27,13 @@ p {                                        /*技能字體 大小*/
     color: blue;
   }
 
-  .image-container {
+.image-container {
     display: flex; /* 使用弹性盒模型布局 */
     justify-content: space-between; /* 左右对齐，两张图片分别位于左右两侧 */
 }
+
 .image-container img {
-max-width: 95%; /* 图片最大宽度为容器的一半，以确保左右排列 */
+    max-width: 95%; /* 图片最大宽度为容器的一半，以确保左右排列 */
 }
 
 .image-wrapper {
@@ -58,6 +59,7 @@ max-width: 95%; /* 图片最大宽度为容器的一半，以确保左右排列 
   overflow: visible; /* 允许文本换行，而不隐藏溢出部分 */
   overflow-wrap: break-word; /* 在单词内允许换行 */
 }
+
 .center-container {
   display: flex;
   justify-content: center; /* 水平居中 */
@@ -69,7 +71,31 @@ max-width: 95%; /* 图片最大宽度为容器的一半，以确保左右排列 
   font-size: 20px;
   /* 添加其他样式属性，例如 behavior、direction、scrollamount 等 */
 }
-  img {
+
+.skill-table {
+  border-collapse: collapse; /* 合并边框 */
+  width: 95%; /* 表格宽度占满容器 */
+  border: 1px solid #ccc; /* 表格边框样式 */
+}
+
+.skill-table td {
+  border: 1px solid #ccc; /* 单元格边框样式 */
+  padding: 8px; /* 单元格内边距 */
+  background-color: #f0f0f0; /* 表头背景色 */
+}
+
+.skill-table th {
+  border: 1px solid #ccc; /* 单元格边框样式 */
+  padding: 8px; /* 单元格内边距 */
+  background-color: #f0f0f0; /* 表头背景色 */
+}
+
+.skill-table img {
+  max-width: 50px; /* 控制技能图标的最大宽度 */
+  height: auto; /* 根据宽度自动调整高度，以保持比例 */
+}
+
+img {
     /*
     置中
     display: block;
