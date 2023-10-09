@@ -3,45 +3,47 @@
   <head>
 
     <meta charset="utf-8" />
-    <title>DBD-黎明殺機</title>
-    <link href="styles/style.css" rel="stylesheet" >
+    <title>DBD-黎明殺機</title>   <!-- 網站標題 -->
+    <link href="styles/style.css" rel="stylesheet" >   <!-- 連結到css檔 -->
 
   </head>
   <body>  
-    <div class="center-container">
+    
+    <button onclick="scrollToTop()" id="scrollTopButton" title="返回顶部">↑</button>  <!-- 返回頂部按鈕 -->
+    <div class="center-container">  
       <marquee 
-      bgcolor = "pink"
-      direction="left"
-      behavior="ALTERNATE"
-      width="500"
-      scrollamount="10"
-                      >  
-      遊戲本體限時特價 US 9.99$
-    </marquee>
+        bgcolor = "pink"  
+        behavior="ALTERNATE"
+        width="500"
+        scrollamount="10"
+                      >  <!-- bg背景顏色  behavior無盡 width背景條寬度  scroll*移動速度-->
+        遊戲本體限時特價 US 9.99$ <!-- 跑馬燈 -->
+      </marquee><!-- 跑馬燈 -->
     
     </div>
     
-    <audio controls loop id="background">
+    <audio controls loop id="background"> <!-- 提供背景音樂 -->
       <source src="audio/background.mp3" type="audio/mpeg">
       您的瀏覽器無法支援音頻播放  <!--當音樂無法播放時會出現的文字-->
     </audio>
-
+    <br>
+    
+    <img src="images/logo.png" alt="logo" class="circle"><!-- 遊戲LOGO -->
+      
+    <button onclick="changename()" id="user">更換使用者</button>
     <h1>殺手</h1>
-    <!-- <a href="https://deadbydaylight.fandom.com/zh/wiki/枯萎者">枯魔</a> -->
+    <br>
+    
 
     <div class="image-container">
+      <!--                                      隱鬼                                    -->
       <div class="image-wrapper">
           
-          <img src="images/隱鬼.png" alt="角色圖片" />
-          <a href="https://deadbydaylight.fandom.com/zh/wiki/幽灵杀手">隱鬼</a>
+          <img src="images/character/wraith/Dead-By-Daylight-Wraith-1.png" alt="角色圖片" id="wraith"/>
+          <a href="https://deadbydaylight.fandom.com/zh/wiki/幽灵杀手" class="character-link">隱鬼</a>
           <p>是一位隱形殺手，能夠在「骷髏喪鐘」的鐘聲中隱身和現身。</p>
-          <audio controls id="Wraith-bell">
-            <source src="audio/Wraith-bell.mp3" type="audio/mpeg">
-            您的瀏覽器無法支援音頻播放
-          </audio>
 
           <br>
-
           <table class="skill-table">
             <tr>
               <td>名稱</td>
@@ -49,35 +51,44 @@
               <td>效果</td>
             </tr>
             <tr>
-              <td>恐慌降臨</td>
-              <td><img src="images\skills\wraith\wraith (1).png" alt="隱鬼30等技能"  /></td>
-              <td>處於你的恐懼範圍內的逃生者。
-                  在修理、治療或破壞時觸發技能檢驗的機率提高10%。
-                  觸發的技能檢驗的成功區域縮小40/50/60 %。</td>
+              <td>窮追不捨</td>
+              <td><img src="images/character/wraith/iconPerks_predator.png" alt="30等技能"  /></td>
+              <td>逃生者留下的劃痕(腳印)會小幅/中幅/大幅變得更加緊湊。</td>
             </tr>
             <tr>
-              <td>所向無敵（快踹）</td>
-              <td><img src="images\skills\wraith\wraith (2).png" alt="隱鬼35等技能"  /></td>
-              <td>破壞板子和發電機的速度增加10/15/20 %。</td>
+              <td>血氣追蹤</td>
+              <td><img src="images/character/wraith/iconPerks_bloodhound.png" alt="35等技能"  /></td>
+              <td>大幅加強血跡的辨識度，血跡的保留時間將增加2/3/4 秒。</td>
             </tr>
             <tr>
-              <td>欣喜若狂（大嘴）</td>
-              <td><img src="images\skills\wraith\wraith (3).png" alt="隱鬼40等技能"  /></td>
-              <td>當你抱著逃生者時
-                  移動速度會增加6/12/18 %。
-                  你的恐懼範圍會增加12米。</td>
+              <td>暗夜之睛（光明眼）</td>
+              <td><img src="images/character/wraith/iconPerks_shadowborn.png" alt="40等技能"  /></td>
+              <td>你在暗夜裡如視白晝。你的視野變寬9/12/15 度。</td>
+            </tr>
+            <tr>
+              <td>技能聲音</td>
+              <td></td>
+              <td><audio controls id="Wraith-bell">
+                <source src="audio/wraith/Wraith-bell.mp3" type="audio/mpeg">
+                您的瀏覽器無法支援音頻播放
+              </audio></td>
+            </tr>
+            <tr>
+              <td>呼吸聲</td>
+              <td></td>
+              <td><audio controls id="Wraith_Breathing">
+                <source src="audio/wraith/Wraith_Breathing.mp3" type="audio/mpeg">
+                您的瀏覽器無法支援音頻播放
+              </audio></td>
             </tr>
           </table>
       </div>
+      <!--                                      醫生                                    -->
       <div class="image-wrapper">
           
-          <img src="images/醫生.png" alt="角色圖片"/>
-          <a href="https://deadbydaylight.fandom.com/zh/wiki/医生">醫生</a>
+          <img src="images/character/doctor/doctor.jpg" alt="角色圖片"/>
+          <a href="https://deadbydaylight.fandom.com/zh/wiki/医生" class="character-link">醫生</a>
           <p>一個令人精神失常的殺手，使用「卡特的電火花」可以製造靜電力場，摧殘逃生者，並導致逃生者出現幻覺，在恐懼中忍不住尖叫，暴露他們的位置。</p>
-          <audio controls id="doctor">
-            <source src="audio/doctor-voice.mp3" type="audio/mpeg">
-            您的瀏覽器無法支援音頻播放
-          </audio>
           
           <br>
 
@@ -89,46 +100,299 @@
             </tr>
             <tr>
               <td>壓迫性氣場</td>
-              <td><img src="images\skills\doctor\doctor (1).png" alt="醫生30等技能"  /></td>
+              <td><img src="images/character/doctor/doctor (1).png" alt="30等技能"  /></td>
               <td>處於你恐懼範圍內的逃生者的效率降低。
                   受影響的逃生者的物品消耗速度增加80/90/100 %。</td>
             </tr>
             <tr>
               <td>監控與打擊（醫生眼）</td>
-              <td><img src="images\skills\doctor\doctor (2).png" alt="醫生35等技能"  /></td>
+              <td><img src="images/character/doctor/doctor (2).png" alt="35等技能"  /></td>
               <td>當你在追逐時，你的恐懼範圍會擴大8米。在其他時候，你的恐懼範圍會縮小8米，而你的視野會拓展3/5/10 度。</td>
             </tr>
             <tr>
               <td>電量超載（醫生腳）</td>
-              <td><img src="images\skills\doctor\doctor (3).png" alt="醫生40等技能"  /></td>
+              <td><img src="images/character/doctor/doctor (3).png" alt="40等技能"  /></td>
               <td>通過執行破壞發電機來使一台發電機電量超載。
                   下一個使用該發電機的逃生者將面臨極大難度的技能檢驗。未通過技能檢驗會導致額外3/4/5 %發電機進度扣除。              
                   技能檢驗成功則將防止發電機爆炸，但不會賦予玩家任何進度。</td>
+            </tr>
+            <tr>
+              <td>笑聲</td>
+              <td></td>
+              <td><audio controls id="doctor-laugh">
+                <source src="audio/doctor/doctor-voice.mp3" type="audio/mpeg">
+                您的瀏覽器無法支援音頻播放
+              </audio></td>
             </tr>
           </table>
       </div>
     </div>
 
       <br><br><br>
-
+    
     <div class="image-container">
+      <!--                                      鬼武士                                    -->
       <div class="image-wrapper">
         
-        <img src="images/鬼武士.png" alt="角色圖片" />
+        <img src="images/character/oni/oni.jpg" alt="角色圖片" />
         <a href="https://deadbydaylight.fandom.com/zh/wiki/鬼武士">鬼武士</a>
-        <p>能夠吸收受傷敵人的血液能量，然後利用這些血液能量變成一個殘酷的惡魔。 使用他的力量山岡之怒，不但能進行長距離衝刺，並能使用較大範圍的特殊攻擊「惡魔之擊」，被命中的逃生者會直接進入瀕死狀態。</p>
+        <p>能夠吸收受傷敵人的血液能量，然後利用這些血液能量變成一個殘酷的惡魔。 使用他的力量「山岡之怒」，不但能進行長距離衝刺，並能使用較大範圍的特殊攻擊「惡魔之擊」，被命中的逃生者會直接進入瀕死狀態。</p>
+        <br>
+
+          <table class="skill-table">
+            <tr>
+              <td>名稱</td>
+              <td>技能</td>
+              <td>效果</td>
+            </tr>
+            <tr>
+              <td>殘心</td>
+              <td><img src="images/character/oni/iconPerks_zanshinTactics.png" alt="30等技能"  /></td>
+              <td>處於你恐懼範圍內的逃生者的效率降低。
+                  受影響的逃生者的物品消耗速度增加80/90/100 %。</td>
+            </tr>
+            <tr>
+              <td>鮮血迴響</td>
+              <td><img src="images/character/oni/iconPerks_bloodEcho.png" alt="35等技能"  /></td>
+              <td>當你在追逐時，你的恐懼範圍會擴大8米。在其他時候，你的恐懼範圍會縮小8米，而你的視野會拓展3/5/10 度。</td>
+            </tr>
+            <tr>
+              <td>報應</td>
+              <td><img src="images/character/oni/iconPerks_nemesis.png" alt="40等技能"  /></td>
+              <td>通過執行破壞發電機來使一台發電機電量超載。
+                  下一個使用該發電機的逃生者將面臨極大難度的技能檢驗。未通過技能檢驗會導致額外3/4/5 %發電機進度扣除。              
+                  技能檢驗成功則將防止發電機爆炸，但不會賦予玩家任何進度。</td>
+            </tr>
+            <tr>
+              <td>呼吸聲</td>
+              <td></td>
+              <td><audio controls id="Oni_Breathing" >
+                <source src="audio/oni/Oni_Breathing.ogg" type="audio/mpeg">
+                您的瀏覽器無法支援音頻播放
+              </audio></td>
+            </tr>
+            <tr>
+              <td>啟動技能</td>
+              <td></td>
+              <td><audio controls id="oni_scream">
+                <source src="audio/oni/oni_scream.mp3" type="audio/mpeg">
+                您的瀏覽器無法支援音頻播放
+              </audio></td>
+            </tr>
+          </table>
       </div>
+      <!--                                      枯魔                                    -->
       <div class="image-wrapper">
           
-          <img src="images/枯魔.png" alt="角色圖片" />
+          <img src="images/character/blight/blight.jpg" alt="角色圖片" />
           <a href="https://deadbydaylight.fandom.com/zh/wiki/枯萎者">枯魔</a>
           <p>一名敏捷的殺手，可以依靠「枯萎腐敗」以極快的速度向前衝刺，在撞上障礙物後反彈並傷害倖存者。</p>
+          <br>
+
+          <table class="skill-table">
+            <tr>
+              <td>名稱</td>
+              <td>技能</td>
+              <td>效果</td>
+            </tr>
+            <tr>
+              <td>巨龍之握</td>
+              <td><img src="images/character/blight/iconPerks_hexUndying.png" alt="30等技能"  /></td>
+              <td>你踢過某台發電機後，接下來30秒內與其互動的逃生者會發出尖叫暴露其位置，持續4秒，同時受到危險狀態影響，持續60秒。
+                  巨龍之握 的冷卻時間為120/100/80 秒。</td>
+            </tr>
+            <tr>
+              <td>厄咒：鮮血恩惠</td>
+              <td><img src="images/character/blight/iconPerks_hexBloodFavor.png" alt="35等技能"  /></td>
+              <td>當一名逃生者被命中時，你所在位置附近16米內的一處板子會被惡靈固定15秒。被固定的板子無法被放下。
+                  厄咒：鮮血恩惠 的冷卻時間為60/50/40 秒。</td>
+            </tr>
+            <tr>
+              <td>厄咒：不死</td>
+              <td><img src="images/character/blight/iconPerks_dragonsGrip.png" alt="40等技能"  /></td>
+              <td>當厄咒：不死 生效時，任何灰暗圖騰周圍2/3/4 米的逃生者氣場將會顯示。
+                  當有另一不同的厄咒圖騰被淨化時，此厄咒將轉換至適用的厄咒：不死圖騰，並關閉厄咒：不死。
+                  轉換的厄咒所有的代幣也會被轉換。</td>
+            </tr>
+          </table>
       </div>
+    </div>
+  
+
+  <div class="image-container">
+    <!--                                      夾子                                    -->
+    <div class="image-wrapper">
+        
+        <img src="images/character/trapper/trapper.jpg" alt="角色圖片" />
+        <a href="https://deadbydaylight.fandom.com/zh/wiki/陷阱杀手">夾子鬼</a>
+        <p>一個控場型殺手，能夠使用致命的捕獸夾對全圖施加壓力並等待逃生者踩中陷阱</p>
+
+        <br>
+        <table class="skill-table">
+          <tr>
+            <td>名稱</td>
+            <td>技能</td>
+            <td>效果</td>
+          </tr>
+          <tr>
+            <td>恐慌降臨</td>
+            <td><img src="images/character/trapper/trapper (2).png" alt="30等技能"  /></td>
+            <td>處於你的恐懼範圍內的逃生者
+                在修理、治療或破壞時觸發技能檢驗的機率提高10%。
+                觸發的技能檢驗 IconHelp skillChecks的成功區域縮小40/50/60 %</td>
+          </tr>
+          <tr>
+            <td>所向無敵（快踹）</td>
+            <td><img src="images/character/trapper/trapper (1).png" alt="35等技能"  /></td>
+            <td>破壞板子和發電機的速度增加10/15/20 %。</td>
+          </tr>
+          <tr>
+            <td>欣喜若狂（大嘴）</td>
+            <td><img src="images/character/trapper/trapper (3).png" alt="40等技能"  /></td>
+            <td>當你抱著逃生者時
+                移動速度會增加6/12/18 %。
+                你的恐懼範圍會增加12米。</td>
+          </tr>
+          <tr>
+            <td>呼吸聲</td>
+            <td></td>
+            <td><audio controls id="Trapper_Breathing">
+              <source src="audio/trapper/Trapper_Breathing.oga" type="audio/mpeg">
+              您的瀏覽器無法支援音頻播放
+            </audio></td>
+          </tr>
+        </table>
+    </div>
+    <!--                                      比利                                    -->
+    <div class="image-wrapper">
+        
+        <img src="images/character/bili/bili.jpg" alt="角色圖片"/>
+        <a href="https://deadbydaylight.fandom.com/zh/wiki/电锯杀手">電鋸</a>
+        <p>是一位高機動性殺手，能夠在很短的時間內跨越很遠的距離，並使用他的電鋸迅速擊倒逃生者。</p>
+        
+        <br>
+
+        <table class="skill-table">
+          <tr>
+            <td>名稱</td>
+            <td>技能</td>
+            <td>效果</td>
+          </tr>
+          <tr>
+            <td>耐力持久（醜臉）</td>
+            <td><img src="images/character/bili/iconPerks_enduring.png" alt="30等技能"  /></td>
+            <td>你被木板砸暈的持續時間縮短40/45/50 %。</td>
+          </tr>
+          <tr>
+            <td>光明之眼</td>
+            <td><img src="images/character/bili/iconPerks_lightborn.png" alt="35等技能"  /></td>
+            <td>試圖使你障目的逃生者會暴露其氣場6秒/8秒/10秒。
+                你對手电筒和鞭炮的障目狀態免疫。</td>
+          </tr>
+          <tr>
+            <td>工匠</td>
+            <td><img src="images/character/bili/iconPerks_tinkerer.png" alt="40等技能"  /></td>
+            <td>當發電機進度達到85%時將發出聲音提示，同時你將獲得無法偵測狀態，持續8秒。</td>
+          </tr>
+          <tr>
+            <td>呼吸聲</td>
+            <td></td>
+            <td><audio controls id="Hillbilly_Breathing">
+              <source src="audio/bili/Hillbilly_Breathing.oga" type="audio/mpeg">
+              您的瀏覽器無法支援音頻播放
+            </audio></td>
+          </tr>
+        </table>
+    </div>
   </div>
-    
-    
+
+  <br><br><br>  
+  
+  <div class="image-container">
+    <!--                                      藝術家                                    -->
+    <div class="image-wrapper">
+        
+        <img src="images/character/artist/artist.jpg" alt="角色圖片" />
+        <a href="https://deadbydaylight.fandom.com/zh/wiki/藝術家">藝術家</a>
+        <p>一名遠程偵察型殺手，能夠發射恐鴉穿越地圖發現並攻擊逃生者</p>
+
+        <br>
+        <table class="skill-table">
+          <tr>
+            <td>名稱</td>
+            <td>技能</td>
+            <td>效果</td>
+          </tr>
+          <tr>
+            <td>冷酷之擁</td>
+            <td><img src="images/character/artist/grimEmbrace.png" alt="30等技能"  /></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>天災鉤子：痛苦共鳴</td>
+            <td><img src="images/character/artist/painResonance.png" alt="35等技能"  /></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>厄咒：修飾痕</td>
+            <td><img src="images/character/artist/hexPentimento.png" alt="40等技能"  /></td>
+            <td></td>
+          </tr>
+        </table>
+    </div>
+    <!--                                      皮臉                                    -->
+    <div class="image-wrapper">
+        
+        <img src="images/character/bubba/bubba.jpg" alt="角色圖片"/>
+        <a href="https://deadbydaylight.fandom.com/zh/wiki/食人魔">電鋸</a>
+        <p>是一個持電鋸的殺手，能夠利用他的能力觸發致命的狂暴，立即擊倒他路過的任何人。</p>
+        
+        <br>
+
+        <table class="skill-table">
+          <tr>
+            <td>名稱</td>
+            <td>技能</td>
+            <td>效果</td>
+          </tr>
+          <tr>
+            <td>擊倒出局</td>
+            <td><img src="images/character/bubba/iconPerks_knockOut.png" alt="30等技能"  /></td>
+            <td>用普通攻擊擊倒逃生者，瀕死狀態的逃生者氣場不會向32/24/16 米外其他逃生者顯示。
+
+              接下來的15秒內，以下效果給了瀕死狀態的逃生者：
+              縮減他們的視野，並且使他們耳聾。
+              得到障目狀態效果。
+              且爬行速度減少-50%＆恢復速度減少-25%。
+            </td>
+          </tr>
+          <tr>
+            <td>人肉燒烤（BBQ）</td>
+            <td><img src="images/character/bubba/iconPerks_BBQAndChili.png" alt="35等技能"  /></td>
+            <td>鉤住一名逃生者後，距離該處鉤子32/24/16 米範圍外的其他逃生者氣場將向你顯示，持續4秒。</td>
+          </tr>
+          <tr>
+            <td>富蘭克林之死（打手）</td>
+            <td><img src="images/character/bubba/iconPerks_franklinsLoss.png" alt="40等技能"  /></td>
+            <td>你的普通攻擊會使逃生者掉落手中的道具。
+              如果物品掉落後沒有被拾起，就會在150/120/90 秒後被惡靈吞噬所有耐久度。
+              掉落的物品在32米範圍向你顯示氣場，隨著時間慢慢流逝從白色變紅色。</td>
+          </tr>
+          <tr>
+            <td>呼吸聲</td>
+            <td></td>
+            <td><audio controls id="Hillbilly_Breathing">
+              <source src="audio/bili/Hillbilly_Breathing.oga" type="audio/mpeg">
+              您的瀏覽器無法支援音頻播放
+            </audio></td>
+          </tr>
+        </table>
+    </div>
+  </div>
+
+  <br><br><br> 
   </body>
   <br>
-  <button>更換使用者</button>
+  
   <script src="scripts/main.js"></script>
 </html>

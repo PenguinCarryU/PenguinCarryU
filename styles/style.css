@@ -8,7 +8,7 @@ h1 {                                        /*角色名稱*/
     line-height: 1;
     letter-spacing: 2px;                    /*間距*/
 }
-a {                                        /*技能字體 大小*/
+.character-link {                                        /*技能字體 大小*/
     font-size: 30px;                        /*大小*/
     font-family: 'Noto Serif TC', serif;    /*字體*/
     line-height: 2;
@@ -46,7 +46,7 @@ p {                                        /*技能字體 大小*/
 .image-wrapper img {
   width: 700px; /* 控制图片的宽度，可以根据需要调整 */
   height: 700px; /* 控制图片的高度，可以根据需要调整 */
-  object-fit: cover; /* 保持图片比例并填充容器 */
+  object-fit: contain; /* 保持图片比例并填充容器 *//*scale-down*/
 }
 
 
@@ -74,26 +74,53 @@ p {                                        /*技能字體 大小*/
 
 .skill-table {
   border-collapse: collapse; /* 合并边框 */
-  width: 95%; /* 表格宽度占满容器 */
+  max-width: 500px; /* 限制文本的最大宽度，根据需要调整 */
   border: 1px solid #ccc; /* 表格边框样式 */
 }
 
 .skill-table td {
   border: 1px solid #ccc; /* 单元格边框样式 */
   padding: 8px; /* 单元格内边距 */
-  background-color: #f0f0f0; /* 表头背景色 */
+  background-color: gray; /* 表头背景色 */
 }
 
 .skill-table th {
   border: 1px solid #ccc; /* 单元格边框样式 */
   padding: 8px; /* 单元格内边距 */
-  background-color: #f0f0f0; /* 表头背景色 */
+  background-color: gray; /* 表头背景色 */
 }
 
 .skill-table img {
   max-width: 50px; /* 控制技能图标的最大宽度 */
   height: auto; /* 根据宽度自动调整高度，以保持比例 */
 }
+
+#scrollTopButton {
+  display: none; /* 初始状态隐藏按钮 */
+  position: fixed; /* 固定在屏幕上 */
+  bottom: 20px; /* 距离底部的距离 */
+  right: 20px; /* 距离右侧的距离 */
+  font-size: 24px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 10px;
+}
+.circle {
+  position: absolute;
+  top: 10px; /* 距离视口顶部的距离 */
+  right: 10px; /* 距离视口右侧的距离 */
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: black;
+  object-fit: scale-down;
+}
+
+
 
 img {
     /*
@@ -111,3 +138,5 @@ body {
     border: 5px solid black;//邊框寬度
     */
   }
+
+  
