@@ -1,0 +1,87 @@
+h1 {
+  text-align: center; /* 水平居中文本内容 */
+  font-size: 50px;
+}
+p {
+  /* 添加以下样式以确保文本在上下排列 */
+  display: block; /* 将 <p> 元素设置为块级元素，独占一行 */
+  clear: both; /* 清除左右浮动，确保在上下排列 */
+}
+body {
+  background-color: rgba(0, 0, 0, 0.712);
+  color: white; /* 可选，设置文本颜色为白色以提高可读性 */
+}
+.container {
+  position: relative;
+  background-color: black;
+  border: 1px solid #000; /* 添加内框 */
+  display: block;
+  justify-content: center !important; /* 水平居中 */
+  margin: 100px 220px 10px 220px; /* 顺序为上、右、下、左 */
+  max-width: 100%;
+  width:auto;
+}
+
+.container p {
+  margin: 10px; /* 可选，设置段落与容器的内边距 */
+  width: auto; /* 设置容器的宽度，根据需要调整 */
+  
+}
+
+#scrollTopButton {
+  display: none; /* 初始状态隐藏按钮 */
+  position: fixed; /* 固定在屏幕上 */
+  bottom: 20px; /* 距离底部的距离 */
+  right: 20px; /* 距离右侧的距离 */
+  font-size: 24px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 10px;
+}
+.character {
+  position: fixed; /* 设置内部欄位为固定定位 */
+    top: 20px; /* 设置内部欄位与容器顶部的距离 */
+    right: 20px; /* 设置内部欄位与容器右侧的距离 */
+    background-color: rgba(2, 0, 128, 0.836); /* 内部欄位的背景颜色，根据需要调整 */
+    color: #fff; /* 内部欄位的文字颜色，根据需要调整 */
+    padding: 10px; /* 内部欄位的内边距，根据需要调整 */
+}
+
+.logo{
+  position: absolute;
+  left: 10px; /* 距离视口左侧的距离 */
+}
+
+.title{
+  font-size: 30px;
+}
+
+.perkz{
+  width:100px;
+  height: auto;
+}
+
+.skill-table {
+  border-collapse: collapse; /* 合并边框 */
+  width:auto;
+  border: 1px solid #ccc; /* 表格边框样式 */
+}
+.skill-table td {
+  border: 1px solid #ccc; /* 单元格边框样式 */
+  padding: 8px; /* 单元格内边距 */
+  background-color: rgb(58, 0, 0); /* 表头背景色 */
+}
+
+.skill-table th {
+  border: 1px solid #ccc; /* 单元格边框样式 */
+  padding: 8px; /* 单元格内边距 */
+  background-color: rgb(58, 0, 0); /* 表头背景色 */
+}
+
+.skill-table img {
+  max-width: 50px; /* 控制技能图标的最大宽度 */
+  height: auto; /* 根据宽度自动调整高度，以保持比例 */
+}
