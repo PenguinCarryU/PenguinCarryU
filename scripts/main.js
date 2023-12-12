@@ -6,6 +6,8 @@ let allLiElements = document.querySelectorAll("a");
 for (let i = 0; i < allLiElements.length; i++) {
     allLiElements[i].style.color = "white";
 }
+
+
 let allLiElements1 = document.querySelectorAll("p");
 for (let i = 0; i < allLiElements.length; i++) {
     allLiElements1[i].style.color = "#91e3dc";
